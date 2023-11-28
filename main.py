@@ -42,7 +42,7 @@ class ImageProcessor:
         self.original_btn.pack(pady=3)
 
         self.grey_btn = tk.Button(
-            self.root, text="Show ", command=self.show_grey,
+            self.root, text="Show Gray", command=self.show_grey,
         )
         self.grey_btn.pack(pady=3)
 
@@ -293,7 +293,7 @@ class ImageProcessor:
     def show_my_median(self):
         if self.image is None:
             return
-        median=self.median_filter(self.get_grey(),7)
+        median=self.median_filter(self.get_grey(),5)
         self.display_image(median)
 
     def show_minimum(self):
